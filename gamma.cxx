@@ -25,9 +25,27 @@
 #include <iostream>
 #include <gtk/gtk.h>
 
+using namespace std;
+
 int main(int argc, char **argv)
 {
+	GtkBuilder *builder;
+	GtkWidget  *window;
 	std::cout << "Hello World2!" <<  std::endl;
+	
+	gtk_init (&argc, &argv);											// pass arguments to gtk
+	
+	builder = gtk_builder_new_from_file ("gamma_hmi.glade");		// loads xml with hmi info
+	/* Connect signal handlers to the constructed widgets. */
+	window = GTK_WIDGET(gtk_builder_get_object(builder, "window"));
+	//gtk_builder_connect_signals(builder, NULL); 						//To connect the signals defined in the .glade, but signals callbacks are already defined in code
+	g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);	// callback to close the window
+	
+	//-------- SHOW WINDOW --------//
+	//g_object_unref(builder);//???????
+	gtk_widget_show(window);
+	gtk_main ();
+	
 	return 0;
 }
 

@@ -29,19 +29,17 @@ long_line_column=72
 
 [files]
 current_page=0
-FILE_NAME_0=870;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2Fgamma%2Fgamma.cxx;0;4
-FILE_NAME_1=1221;C++;0;EUTF-8;2;1;0;%2Fusr%2Finclude%2Fglib-2.0%2Fglib%2Fgtypes.h;0;2
-FILE_NAME_2=0;C++;0;EUTF-8;0;1;0;%2Fusr%2Finclude%2Fstdc-predef.h;0;3
-FILE_NAME_3=1309;C++;0;EUTF-8;0;1;0;%2Fusr%2Finclude%2Fgtk-3.0%2Fgdk%2Fgdktypes.h;0;2
+FILE_NAME_0=984;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2Fgamma%2Fgamma.cxx;0;4
+FILE_NAME_1=0;XML;0;EUTF-8;0;1;0;%2Fhome%2Fpi%2Fgamma%2Fgamma_hmi.glade;0;2
 
 [VTE]
 last_dir=/home/pi/gamma
 
 [build-menu]
 C++FT_00_LB=_Compile
-C++FT_00_CM=sudo g++ -Wall `pkg-config --cflags --libs gtk+-3.0` "%f"
+C++FT_00_CM=g++ -Wall "%f" `pkg-config --cflags --libs gtk+-3.0`
 C++FT_00_WD=
 filetypes=C++;
 C++FT_01_LB=_Build
-C++FT_01_CM=g++ -Wall `pkg-config --cflags --libs gtk+-3.0` -o "%e" "%f"
+C++FT_01_CM=g++ -Wall -o "%e" "%f" `pkg-config --cflags --libs gtk+-3.0`
 C++FT_01_WD=
