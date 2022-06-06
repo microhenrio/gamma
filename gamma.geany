@@ -20,7 +20,7 @@ indent_mode=2
 [project]
 name=gamma
 base_path=/home/pi/gamma/
-description=
+description=Gamma (GAMe MAster) is a software to control th electronics boardgame Helvetios
 file_patterns=
 
 [long line marker]
@@ -29,17 +29,17 @@ long_line_column=72
 
 [files]
 current_page=0
-FILE_NAME_0=984;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2Fgamma%2Fgamma.cxx;0;4
-FILE_NAME_1=0;XML;0;EUTF-8;0;1;0;%2Fhome%2Fpi%2Fgamma%2Fgamma_hmi.glade;0;2
+FILE_NAME_0=362;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2Fgamma%2Fgamma.cxx;0;4
+FILE_NAME_1=42838;C++;0;EUTF-8;1;1;0;%2Fusr%2Finclude%2Flibusb-1.0%2Flibusb.h;0;4
 
 [VTE]
 last_dir=/home/pi/gamma
 
 [build-menu]
 C++FT_00_LB=_Compile
-C++FT_00_CM=g++ -Wall "%f" `pkg-config --cflags --libs gtk+-3.0`
+C++FT_00_CM=g++ -Wall "%f" `pkg-config --cflags --libs gtk+-3.0 libusb-1.0`
 C++FT_00_WD=
 filetypes=C++;
 C++FT_01_LB=_Build
-C++FT_01_CM=g++ -Wall -o "%e" "%f" `pkg-config --cflags --libs gtk+-3.0`
+C++FT_01_CM=g++ -Wall -g -o "%e" "%f" `pkg-config --cflags --libs gtk+-3.0 libusb-1.0`
 C++FT_01_WD=
